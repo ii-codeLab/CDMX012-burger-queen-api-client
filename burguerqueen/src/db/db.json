@@ -1,112 +1,108 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Americano",
-            "price": "5",
-            "image": "https://imgur.com/VUdOV0N",
-            "type": "Breakfast",
-            "dateEntry": "07/06/2022"
-        },
-
+  "products": [
     {
-            "id": 2,
-            "name": "Latte",
-            "price": "7",
-            "image": "https://imgur.com/a/ZrNza8h",
-            "type": "Breakfast",
-            "dateEntry": "07/06/2022"
-        },
-
+      "id": 1,
+      "name": "Americano",
+      "price": "5",
+      "image": "https://imgur.com/VUdOV0N",
+      "type": "Breakfast",
+      "dateEntry": "07/06/2022"
+    },
     {
-            "id": 3,
-            "name": "Ham and cheese sandwich",
-            "price": "10",
-            "image": "https://imgur.com/5yaJ32r",
-            "type": "Breakfast",
-            "dateEntry": "07/06/2022"
-        },
-
+      "id": 2,
+      "name": "Latte",
+      "price": "7",
+      "image": "https://imgur.com/a/ZrNza8h",
+      "type": "Breakfast",
+      "dateEntry": "07/06/2022"
+    },
     {
-            "id": 4,
-            "name": "Natural fruit juice",
-            "price": "7",
-            "image": "https://imgur.com/FTLYCn0",
-            "type": "Breakfast",
-            "dateEntry": "07/06/2022"
-        },
-    
-        {
-            "id": 5,
-            "name": "Single hamburger",
-            "price": "10",
-            "image": "https://imgur.com/4TUoNwt",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 6,
-            "name": "Double hamburger",
-            "price": "15",
-            "image": "https://imgur.com/ECvUeto",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 7,
-            "name": "French fries",
-            "price": "5",
-            "image": "https://imgur.com/npunATG",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 8,
-            "name": "Onion rings",
-            "price": "5",
-            "image": "https://imgur.com/ocsm5r0",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 9,
-            "name": "Water 500ml",
-            "price": "5",
-            "image": "https://imgur.com/3K46wUU",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 10,
-            "name": "Water 750ml",
-            "price": "7",
-            "image": "https://imgur.com/z6tfALx",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 11,
-            "name": "Drink/soda 500ml",
-            "price": "7",
-            "image": "https://imgur.com/WXs5ecY",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        },
-
-        {
-            "id": 12,
-            "name": "Drink/soda 750ml",
-            "price": "10",
-            "image": "https://imgur.com/fr24qrk",
-            "type": "Daytime",
-            "dateEntry": "07/06/2022"
-        }
-        
-    ]
+      "id": 3,
+      "name": "Ham and cheese sandwich",
+      "price": "10",
+      "image": "https://imgur.com/5yaJ32r",
+      "type": "Breakfast",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 4,
+      "name": "Natural fruit juice",
+      "price": "7",
+      "image": "https://imgur.com/FTLYCn0",
+      "type": "Breakfast",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 5,
+      "name": "Single hamburger",
+      "price": "10",
+      "image": "https://imgur.com/4TUoNwt",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 6,
+      "name": "Double hamburger",
+      "price": "15",
+      "image": "https://imgur.com/ECvUeto",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 7,
+      "name": "French fries",
+      "price": "5",
+      "image": "https://imgur.com/npunATG",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 8,
+      "name": "Onion rings",
+      "price": "5",
+      "image": "https://imgur.com/ocsm5r0",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 9,
+      "name": "Water 500ml",
+      "price": "5",
+      "image": "https://imgur.com/3K46wUU",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 10,
+      "name": "Water 750ml",
+      "price": "7",
+      "image": "https://imgur.com/z6tfALx",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 11,
+      "name": "Drink/soda 500ml",
+      "price": "7",
+      "image": "https://imgur.com/WXs5ecY",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "id": 12,
+      "name": "Drink/soda 750ml",
+      "price": "10",
+      "image": "https://imgur.com/fr24qrk",
+      "type": "Daytime",
+      "dateEntry": "07/06/2022"
+    },
+    {
+      "name": "White chocolate",
+      "price": "40",
+      "image": "asdsadasdas",
+      "type": "Breakfast",
+      "dateEntry": "07/06/2022",
+      "id": 13
+    }
+  ]
 }
