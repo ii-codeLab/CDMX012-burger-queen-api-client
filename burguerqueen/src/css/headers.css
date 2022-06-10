@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
 header {
     width: 100vw;
     height: 70px;
     background: linear-gradient(#B68216, #D5BE37);
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,7 @@ header {
 
 h1 {
     display: inline;
-    padding-left: 15px;
+    padding-left: 30px;
     padding-bottom: 15px;
     font-family: 'Pacifico', cursive;
     Font-style: Regular;
@@ -40,6 +40,7 @@ li {
 }
 
 .btnHome {
+    margin-right: 30px;
     padding: 40px;
     height: 40px;
     width: 40px;
