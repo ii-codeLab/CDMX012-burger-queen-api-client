@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+header {
+    width: 100vw;
+    height: 70px;
+    background: linear-gradient(#B68216, #D5BE37);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    display: inline;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-family: 'Pacifico', cursive;
+    Font-style: Regular;
+    font-size: 40px;
+    color: rgb(146, 2, 25);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding-left: 25px;
+    color: rgb(84, 69, 39);
+    font-family: 'Roboto', sans-serif;
+    Font-style: medium;
+    Font-size: 28px;
+    Line-height: 38px;
+    Line-height: 100%;
+
+}
+
+.btnHome {
+    padding: 40px;
+    height: 40px;
+    width: 40px;
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
