@@ -8,7 +8,7 @@ function Headers() {
                 <header>
                 <h1>Burguer Queen</h1>
 
-                <nav class="menu">
+                <nav className="menu">
                     <ul>
                         <li>New Order</li>
                         <li>In Process</li>
