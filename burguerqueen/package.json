@@ -16,13 +16,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "json-server --watch --port 5000 src/db/db.json"
+    "dev": "json-server --watch --port 3128 src/db/db.json"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
-      "eslint:recommended", "plugin:react/recommended"
+      "eslint:recommended",
+      "plugin:react/recommended"
     ]
   },
   "browserslist": {
@@ -42,4 +43,3 @@
     "eslint-plugin-react": "^7.30.0"
   }
 }
-

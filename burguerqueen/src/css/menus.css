@@ -1,11 +1,16 @@
 .btns_container{
     width: 50%;
+    height: 70px;
+    padding: 20px;
+    background-color: #e94b4b;
+    
 }
 
 #btn_breakfast, #btn_daytime{
-    margin: 20px;
-    width: 200px;
-    height: 75px;
+    margin-right: 20px;
+    width: 180px;
+    height: 65px;
+    justify-content: center;
 
     color: #F2CA7E;
     font-family: 'Roboto';
@@ -18,7 +23,6 @@
     border: none;
     border-radius: 45px;
     box-shadow:  0px 4px 4px #431506; 
-
 }
 
 #btn_breakfast:active, #btn_daytime:active{

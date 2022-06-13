@@ -1,13 +1,20 @@
 import React from 'react'
 
-function Menus() {
+/* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
+function Menus({onBreakfast, onDaytime}) {
+  const handleBreakfast = ()=>{
+    onBreakfast()
+  }
+
+  const handleDaytime = ()=>{
+    onDaytime()
+  }
+
   return (
     <>
-      <div>
-          <section className='btns_container'>
-            <button id='btn_breakfast'>Breakfast</button>
-            <button id='btn_daytime'>Daytime</button>
-          </section>
+      <div className='btns_container'>
+                <button id='btn_breakfast' onClick={handleBreakfast}>Breakfast</button>
+                <button id='btn_daytime' onClick={handleDaytime}>Daytime</button>
       </div>
     </>
   )

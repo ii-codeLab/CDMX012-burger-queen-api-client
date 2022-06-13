@@ -1,0 +1,24 @@
+.container{
+    width: 55vw;
+    /*display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;*/
+    background-color: rgb(241, 124, 13);
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+
+}
+
+
+.product_container{
+    width:10vw;
+    height: 251px;
+    background-color: rgb(119, 181, 235);
+}
+
+.product_container img{
+    width: 100%;
+    height: 60%;
+}
