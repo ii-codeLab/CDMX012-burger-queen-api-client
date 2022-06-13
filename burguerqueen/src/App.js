@@ -3,13 +3,18 @@ import { useEffect, useState } from "react";
 
 import Headers from "./components/Headers";
 import Menus from "./components/Menus";
+import DataProducts from "./components/DataProducts";
+
 import "./css/headers.css";
 import "./css/menus.css";
+import "./css/dataProducts.css";
 import "./App.css";
 
 function App() {
-  const url = "http://localhost:5000/products";
-  const [products, setProducts] = useState();
+  const url = "http://localhost:3128/products";
+  const [products, setProducts] = useState([]);
+  const [productMenu, setProductMenu] = useState([]);
+
   const fetchApi = async () => {
     const response = await fetch(url);
     const responseJson = await response.json();
@@ -22,28 +27,26 @@ function App() {
     // eslint-disable-next-line
   }, []);
 
+
+  const onBreakfast = () => {
+    setProductMenu(products.filter((product) => product.type === "Breakfast"));
+  };
+
+  const onDaytime = () => {
+    setProductMenu(products.filter((product) => product.type === "Daytime"));
+  };
+
   return (
     <>
       <div>
         <Headers></Headers>
-        <Menus />
 
-        {!products
-          ? "Loading ...."
-          : products.map((product, index) => {
-              return (
-                <div key={product.id}>
-                  <section>
-                    <img src={product.image} alt=""></img>
+        <Menus 
+        onBreakfast={onBreakfast} 
+        onDaytime={onDaytime} 
+        />
 
-                    <p>{product.name}</p>
-                    <p>
-                      <strong>{product.price}</strong>
-                    </p>
-                  </section>
-                </div>
-              );
-            })}
+        <DataProducts products={productMenu} />
       </div>
     </>
   );
