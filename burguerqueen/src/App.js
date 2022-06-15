@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import Headers from "./components/Headers";
 import Menus from "./components/Menus";
 import DataProducts from "./components/DataProducts";
+import Order from "./components/Order";
 
 import "./css/headers.css";
 import "./css/menus.css";
 import "./css/dataProducts.css";
+import "./css/order.css";
 import "./App.css";
 
 function App() {
@@ -27,7 +29,6 @@ function App() {
     // eslint-disable-next-line
   }, []);
 
-
   const onBreakfast = () => {
     setProductMenu(products.filter((product) => product.type === "Breakfast"));
   };
@@ -41,12 +42,17 @@ function App() {
       <div>
         <Headers></Headers>
 
-        <Menus 
-        onBreakfast={onBreakfast} 
-        onDaytime={onDaytime} 
-        />
+        <section className="principal_container">
+          <section>
+            <Menus onBreakfast={onBreakfast} onDaytime={onDaytime} />
 
-        <DataProducts products={productMenu} />
+            <DataProducts products={productMenu} />
+          </section>
+    
+          <Order />
+
+        </section>
+
       </div>
     </>
   );

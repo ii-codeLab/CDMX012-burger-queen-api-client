@@ -1,7 +1,10 @@
 import React from 'react'
+
 import home from '../assets/home.png'
 
+
 function Headers() {
+  
     return (
         <>
             <div>

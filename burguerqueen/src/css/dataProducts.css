@@ -1,24 +1,38 @@
-.container{
-    width: 55vw;
-    /*display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;*/
-    background-color: rgb(241, 124, 13);
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
 
+.container {
+    margin-left: 20px;
+    width: 53vw;
+    height: 55vw;
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(2, 250px);
+    column-gap: 20px;
+    row-gap: 35px;
+
+
+    /*background-color: rgb(192, 81, 81);*/
 }
 
 
-.product_container{
-    width:10vw;
-    height: 251px;
-    background-color: rgb(119, 181, 235);
+.product_container {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to bottom, rgba(123, 79, 2, 0.06) 91.67%, rgba(123, 79, 2, 0.51) 100%);
 }
 
-.product_container img{
+.product_container img {
     width: 100%;
     height: 60%;
+}
+
+.product_container p {
+    font-family: 'Poppins', sans-serif;
+    Font-style: ExtraBold;
+    Font-size: 17px;
+    Line-height: 30px;
+    Line-height: 100%;
+    color: #A8021F;
+    text-align: center;
+
 }

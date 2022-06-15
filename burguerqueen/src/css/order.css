@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+.order_container {
+    position: absolute;
+    top: 2vw;
+    width: 40vw;
+    height: 63vw;
+    left: 57vw;
+    border-radius: 40px;
+    border: 3px solid #C3993B;
+    box-shadow: 4px 0px 4px #C3973A;
+    /*display: flex;*/
+    /*background-color: rgb(173, 157, 189);*/
+}
+
+.order_container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: Medium;
+    Font-size: 25px;
+    Line-height: 45px;
+    Line-height: 100%;
+    vertical-align: Top;
+    color: #A8021F;
+    display: inline;
+}
+
+.info_client {
+    width: 100%;
+    padding: 25px;
+}
+
+input {
+    width: 150px;
+    outline: none;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid #D9042B;
+    font-size: 25px;
+    color: #A8021F;
+}
+
+::placeholder {
+    color: #C3993B;
+    font-size: 25px;
+}
+
+#table {
+    width: 30px;
+}
+
+.info {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.info p {
+    margin-left: 60px;
+}
+
+.info_items {
+    width: 100%;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btnMenos {
+    margin-left: 25px;
+}
+
+.btnMas {
+    margin-left: 300px;
+}
+
+.total {
+    width: 100%;
+    align-items: center;
+    margin-top: 250px;
+    background-color: #A8021F;
+    padding: 1px;
+    color: #F2CA7E;
+    font-size: 22px;
+
+}
+
+.total h2 {
+    margin-left: 80px;
+    display: inline;
+}
+
+#pesos {
+    margin-left: 150px;
+}
+
+.kitchen{
+    margin-top: 30px;
+    width: 100%;
+}
+
+#btn_kitchen {
+    Font-family: Roboto;
+    Font-style: Regular;
+    Font-size: 35px;
+    Line-height: 41px;
+    Line-height: 100%;
+    color: #64010E;
+    
+    width: 300px;
+    height: 65px;
+    margin-left: 60px;
+    background-color: #F6E23A;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 4px 4px #7B4F02;
+}
