@@ -14,8 +14,16 @@ import "./App.css";
 
 function App() {
   const url = "http://localhost:3128/products";
+
   const [products, setProducts] = useState([]);
   const [productMenu, setProductMenu] = useState([]);
+
+  const [order, setOrder] = useState({
+    client:"",
+    items:[],
+    total:0,
+    status:"pending",
+  })
 
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -37,6 +45,14 @@ function App() {
     setProductMenu(products.filter((product) => product.type === "Daytime"));
   };
 
+  const onAddProduct =(newItem)=>{
+/*------------------ Esto es un callback, que en lugar de pasar un valor de la nueva variable de estado, 
+  ------------------ pasamos una función que tiene acceso al valor de estado anterior, solo se hace cuando
+  ------------------ queremos cambiar el estado de una pequeña parte nuestro arreglo principal */ 
+
+    setOrder((prevState)=>({...prevState,items:[...prevState.items,newItem]}))
+  }
+
   return (
     <>
       <div>
@@ -46,10 +62,10 @@ function App() {
           <section>
             <Menus onBreakfast={onBreakfast} onDaytime={onDaytime} />
 
-            <DataProducts products={productMenu} />
+            <DataProducts products={productMenu} onAddProduct={onAddProduct} />
           </section>
     
-          <Order />
+          <Order order={order} />
 
         </section>
 

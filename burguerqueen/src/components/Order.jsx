@@ -1,9 +1,14 @@
 import React from 'react'
-import mas from '../assets/mas.png'
-import menos from '../assets/menos.png'
+import PropTypes from 'prop-types'
+//import Item from '../components/Item';
+//import mas from '../assets/mas.png'
+//import menos from '../assets/menos.png'
 
 
-const Order = () => {
+const Order = ({order}) => {
+    
+
+
     return (
         <>
             <div className='order_container'>
@@ -20,10 +25,9 @@ const Order = () => {
                     <p>Price </p>
                 </section>
 
-                <section className='info_items'>
-                    <img className="btnMenos" src={menos} alt="Menos" />
-                    <img className="btnMas" src={mas} alt="Mas" />
-                </section>
+               
+               {order.items.map((newItem , id) => <div key={id}> {newItem.name}</div> )}
+               
 
                 <section className='total'>
                     <h2>Total</h2>
@@ -38,7 +42,16 @@ const Order = () => {
 
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Order
+Order.propTypes = {
+    order: PropTypes.object
+  }
+
+export default Order;
+
+ /*<section className='info_items'>
+                    <img className="btnMenos" src={menos} alt="Menos" />
+                    <img className="btnMas" src={mas} alt="Mas" />
+                    </section>*/
