@@ -1,13 +1,13 @@
 import React from "react";
 
 /* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tool
-const DataProducts = ({ products }) => {
+const DataProducts = ({products, onAddProduct}) => {
+
   return (
-    <>
-      <div className="container">
+       <div className="container">
         {products.map((product, index) => {
           return (
-            <section className="product_container" key={index}>
+            <section className="product_container" key={index} onClick={()=>{(onAddProduct(product))}}>
               <img src={product.image} alt=""></img>
               <p>{product.name}</p>
               <p>
@@ -17,7 +17,6 @@ const DataProducts = ({ products }) => {
           );
         })}
       </div>
-    </>
   );
 };
 
