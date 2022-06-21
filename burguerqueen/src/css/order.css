@@ -55,10 +55,13 @@ input {
 }
 
 .info p {
-    margin-left: 60px;
+
+    padding-left: 35px;
+    padding-right: 15px;
 }
 
 .info_items {
+    background-color: #C3973A;
     width: 100%;
     align-items: center;
     margin-top: 25px;
@@ -69,7 +72,7 @@ input {
 }
 
 .btnMas {
-    margin-left: 300px;
+    margin-left: 250px;
 }
 
 .total {
