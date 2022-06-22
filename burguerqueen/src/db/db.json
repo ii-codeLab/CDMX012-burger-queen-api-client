@@ -104,7 +104,27 @@
       "dateEntry": "07/06/2022",
       "id": 13
     }
-  ]
+  ],
   
+  "orders": [
+    {
+      "client":"",
+      "table":"",
+      "products":[
+        {
+          "qty":"",
+          "price":"",
+          "name":""
+        },
+        {
+          "qty":"",
+          "price":"",
+          "name":""
+        }
+      
+      ],
+      "total":""
+    }
+  ]
 
 }
