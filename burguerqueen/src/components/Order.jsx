@@ -6,19 +6,19 @@ import less from '../assets/less.png'
 import { useState } from 'react'
 
 
-const Order = ({ order }) => {
+const Order = ({ order, onAddProduct }) => {
     
     const [countClicks, setCountClicks] = useState(1);
 
 
-    const handlePlus = ()=>{
+    /*const handlePlus = ()=>{
         setCountClicks(countClicks + 1);
-        //console.log("Click de Plus");
-      }
+    //console.log("Click de Plus");
+      }*/
 
       const handleLess = ()=>{
         //console.log("Click de Less");
-        setCountClicks(countClicks - 1);
+        setCountClicks(countClicks - 1)
       }  
 
 
@@ -45,13 +45,13 @@ const Order = ({ order }) => {
                         <section className='info_items' key={id}>
                             <img className="btnMenos" src={less} alt="Menos" onClick={handleLess}/>
 
-                            <p> {countClicks} </p>
+                            <p> {newItem.quantity} </p>
                             <p>{newItem.name}</p>
                             <p>
                                 <strong> $ {newItem.price}</strong>
                             </p>
-                            <img className="btnMas" src={plus} alt="Mas"  onClick={handlePlus}/>
-
+                            <img className="btnMas" src={plus} alt="Mas"  onClick={()=>onAddProduct(newItem)}/>
+                                
                         </section>
                     );
                 })}
