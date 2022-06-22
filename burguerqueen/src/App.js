@@ -50,14 +50,20 @@ function App() {
   ------------------ pasamos una función que tiene acceso al valor de estado anterior, solo se hace cuando
   ------------------ queremos cambiar el estado de una pequeña parte nuestro arreglo principal */ 
 
-  const orderFind = order.items.find(item => item.name === newItem.name)
-  //console.log(orderFind);
 
   /*----------------- Método find nos arroja un valor undefined ya ese elemento no se encuentra dentro del arreglo,
     ----------------- por lo tanto en el if se necesita negar el valor de undefined que al entrar el condicional es valor negativo*/ 
-   
+    console.log(newItem);
+    const orderFind = order.items.find(item => item.name === newItem.name)
+   console.log(orderFind);
     if(!orderFind) {
-      setOrder((prevState)=>({...prevState,items:[...prevState.items,{...newItem, quantity:1}]}))
+      setOrder((prevState)=>({...prevState,items:[...prevState.items,{...newItem, quantity: 1}]}))
+    }else{
+      setOrder((prevState)=>{
+        const newState = {...prevState} 
+        newState.items[newState.items.indexOf(orderFind)].quantity++;
+        return newState
+      })
     }
   }
 
@@ -73,7 +79,7 @@ function App() {
             <DataProducts products={productMenu} onAddProduct={onAddProduct} />
           </section>
     
-          <Order order={order} />
+          <Order order={order} onAddProduct={onAddProduct} />
 
         </section>
 
