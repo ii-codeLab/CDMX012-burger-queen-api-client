@@ -3,25 +3,10 @@ import PropTypes from 'prop-types'
 //import Item from '../components/Item';
 import plus from '../assets/plus.png'
 import less from '../assets/less.png'
-import { useState } from 'react'
+//import { useState } from 'react'
 
 
-const Order = ({ order, onAddProduct }) => {
-    
-    const [countClicks, setCountClicks] = useState(1);
-
-
-    /*const handlePlus = ()=>{
-        setCountClicks(countClicks + 1);
-    //console.log("Click de Plus");
-      }*/
-
-      const handleLess = ()=>{
-        //console.log("Click de Less");
-        setCountClicks(countClicks - 1)
-      }  
-
-
+const Order = ({ order, onAddProduct, onsubstractProducts }) => {
 
     return (
         <>
@@ -43,7 +28,7 @@ const Order = ({ order, onAddProduct }) => {
                 {order.items.map((newItem, id) => {
                     return (
                         <section className='info_items' key={id}>
-                            <img className="btnMenos" src={less} alt="Menos" onClick={handleLess}/>
+                            <img className="btnMenos" src={less} alt="Menos" onClick={()=>onsubstractProducts(newItem)}/>
 
                             <p> {newItem.quantity} </p>
                             <p>{newItem.name}</p>
@@ -66,6 +51,9 @@ const Order = ({ order, onAddProduct }) => {
                 </section>
 
                 <section className='kitchen'>
+                        hacer el handle para el post y considerar que será una promesa then y catch, y considerar qué va a pasar 
+                        en el then y el catch.
+                        ver al botón de kitchen como el que guarda... 
                     <button id='btn_kitchen'>Send to kitchen</button>
 
                 </section>
