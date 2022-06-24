@@ -45,26 +45,37 @@ function App() {
     setProductMenu(products.filter((product) => product.type === "Daytime"));
   };
 
-  const onAddProduct =(newItem)=>{
-/*------------------ Esto es un callback, que en lugar de pasar un valor de la nueva variable de estado, 
-  ------------------ pasamos una función que tiene acceso al valor de estado anterior, solo se hace cuando
-  ------------------ queremos cambiar el estado de una pequeña parte nuestro arreglo principal */ 
-
-
-  /*----------------- Método find nos arroja un valor undefined ya ese elemento no se encuentra dentro del arreglo,
-    ----------------- por lo tanto en el if se necesita negar el valor de undefined que al entrar el condicional es valor negativo*/ 
+  const onAddProduct =(newItem)=>{ 
     console.log(newItem);
-    const orderFind = order.items.find(item => item.name === newItem.name)
-   console.log(orderFind);
+    const orderFind = order.items.find(item => item.id === newItem.id)
+   //console.log("item encontrado", orderFind);
     if(!orderFind) {
       setOrder((prevState)=>({...prevState,items:[...prevState.items,{...newItem, quantity: 1}]}))
     }else{
-      setOrder((prevState)=>{
+      const newItems = order.items.filter((item)=> item.id !== newItem.id)
+      orderFind.quantity++;
+      console.log("item encontrado", orderFind, newItems);
+      newItems.push(orderFind);
+      setOrder({...order, items:newItems})
+      /*setOrder((prevState)=>{
         const newState = {...prevState} 
+        console.log("Aqui andamos", newState.items[newState.items.indexOf(orderFind)].quantity);
         newState.items[newState.items.indexOf(orderFind)].quantity++;
         return newState
-      })
+      })*/
     }
+  }
+
+  const onsubstractProducts = (newItem)=>{
+    const orderF = order.items.find(item => item.id === newItem.id)
+    const reduceItem = order.items.filter((item)=> item.id === newItem.id)
+    orderF.quantity--;
+     console.log(reduceItem);
+    console.log("item restado", orderF);
+    if(orderF.quantity <= 0){
+     reduceItem.shift(orderF)
+    }
+     setOrder({...order, items:reduceItem})
   }
 
   return (
@@ -79,7 +90,7 @@ function App() {
             <DataProducts products={productMenu} onAddProduct={onAddProduct} />
           </section>
     
-          <Order order={order} onAddProduct={onAddProduct} />
+          <Order order={order} onAddProduct={onAddProduct} onsubstractProducts={onsubstractProducts} />
 
         </section>
 
