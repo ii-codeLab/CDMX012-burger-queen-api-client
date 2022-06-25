@@ -19,11 +19,11 @@ function App() {
   const [productMenu, setProductMenu] = useState([]);
 
   const [order, setOrder] = useState({
-    client:"",
-    items:[],
-    total:0,
-    status:"pending",
-  })
+    client: "",
+    items: [],
+    total: 0,
+    status: "pending",
+  });
 
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -45,38 +45,35 @@ function App() {
     setProductMenu(products.filter((product) => product.type === "Daytime"));
   };
 
-  const onAddProduct =(newItem)=>{ 
-    console.log(newItem);
-    const orderFind = order.items.find(item => item.id === newItem.id)
-   //console.log("item encontrado", orderFind);
-    if(!orderFind) {
-      setOrder((prevState)=>({...prevState,items:[...prevState.items,{...newItem, quantity: 1}]}))
-    }else{
-      const newItems = order.items.filter((item)=> item.id !== newItem.id)
-      orderFind.quantity++;
-      console.log("item encontrado", orderFind, newItems);
-      newItems.push(orderFind);
-      setOrder({...order, items:newItems})
-      /*setOrder((prevState)=>{
-        const newState = {...prevState} 
-        console.log("Aqui andamos", newState.items[newState.items.indexOf(orderFind)].quantity);
-        newState.items[newState.items.indexOf(orderFind)].quantity++;
-        return newState
-      })*/
+  const onAddProduct = (newItem) => {
+    //console.log(newItem);
+    const orderFind = order.items.findIndex((item) => item.id === newItem.id);
+    setOrder((prevState) => ({...prevState,items: [...prevState.items, { ...newItem }]}));
+    const copyItem = [...order.items];
+    for (const propertyName in copyItem[orderFind]) {
+      if (propertyName === "quantity") {
+        copyItem[orderFind][propertyName] = copyItem[orderFind][propertyName] + 1;
+      }
+      console.log("item encontrado", orderFind, copyItem);
+      setOrder({ ...order, items: [...copyItem] });
     }
-  }
+  };
 
-  const onsubstractProducts = (newItem)=>{
-    const orderF = order.items.find(item => item.id === newItem.id)
-    const reduceItem = order.items.filter((item)=> item.id === newItem.id)
-    orderF.quantity--;
-     console.log(reduceItem);
-    console.log("item restado", orderF);
-    if(orderF.quantity <= 0){
-     reduceItem.shift(orderF)
+  const onsubstractProducts = (newItem, deleteAll) => {
+    const orderLess = order.items.findIndex((item) => item.id === newItem.id);
+    const copyItemLess = [...order.items];
+    if (newItem.quantity > 1 && !deleteAll) {   //se recibe parametro de deletAll, se realiza comparación
+      for (const propertyName in copyItemLess[orderLess]) {
+        if (propertyName === "quantity") {
+          copyItemLess[orderLess][propertyName] = copyItemLess[orderLess][propertyName] - 1;
+        }
+      }
+    } else {
+      copyItemLess.splice(orderLess, 1);
     }
-     setOrder({...order, items:reduceItem})
-  }
+
+    setOrder({ ...order, items: [...copyItemLess] });
+  };
 
   return (
     <>
@@ -89,11 +86,10 @@ function App() {
 
             <DataProducts products={productMenu} onAddProduct={onAddProduct} />
           </section>
-    
-          <Order order={order} onAddProduct={onAddProduct} onsubstractProducts={onsubstractProducts} />
+
+          <Order order={order} onAddProduct={onAddProduct} onsubstractProducts={onsubstractProducts} /> 
 
         </section>
-
       </div>
     </>
   );
