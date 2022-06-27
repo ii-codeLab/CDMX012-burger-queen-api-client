@@ -6,6 +6,7 @@
       "price": "5",
       "image": "https://elpoderdelconsumidor.org/wp-content/uploads/2021/04/cafe.jpg",
       "type": "Breakfast",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -14,6 +15,7 @@
       "price": "7",
       "image": "https://carta.menu/storage/media/dishes_main/2248611/conversions/dish_thumbnail.jpg",
       "type": "Breakfast",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -22,6 +24,7 @@
       "price": "10",
       "image": "https://easyrecetas.com/wp-content/uploads/2020/04/Receta-de-S%C3%A1ndwich-de-Jam%C3%B3n-y-Queso.jpg",
       "type": "Breakfast",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -30,6 +33,7 @@
       "price": "7",
       "image": "https://images.getduna.com/b974f40e-cb32-439a-b68e-f33dc24f0d84/791999e7377ab048_jugos_en_agua_fywttg.jpg?d=600x600",
       "type": "Breakfast",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -38,6 +42,7 @@
       "price": "10",
       "image": "https://assets.zyrosite.com//AwG6V9n7D6Tqpogn/une-dWx6qn8EJZSNeybP-w1370.jpg",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -46,6 +51,7 @@
       "price": "15",
       "image": "https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrilla-hamburguesa-doble-con-queso-receta-hamburguesa-receta-hamburguesa-doble-queso-hamburg-793x477.jpg",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -54,6 +60,7 @@
       "price": "5",
       "image": "https://freidorasdeairepro.com/wp-content/uploads/2021/05/Copy-of-Copy-of-Copy-of-Copy-of-Untitled-3.jpg",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -62,6 +69,7 @@
       "price": "5",
       "image": "https://t2.uc.ltmcdn.com/es/posts/9/2/6/como_hacer_aros_de_cebolla_34629_600.jpg",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -70,6 +78,7 @@
       "price": "5",
       "image": "https://okdiario.com/img/vida-sana/2016/08/18/agua.jpg",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -78,6 +87,7 @@
       "price": "7",
       "image": "https://lacolonia.vtexassets.com/arquivos/ids/159469-1600-1600?v=636784084229070000&width=1600&height=1600&aspect=true",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -86,6 +96,7 @@
       "price": "7",
       "image": "https://http2.mlstatic.com/D_NQ_NP_2X_647084-MLM42104149924_062020-F.webp",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -94,6 +105,7 @@
       "price": "10",
       "image": "https://surtitienda.vteximg.com.br/arquivos/ids/165949-2000-2000/07501055302086.1.jpg?v=636862234997230000",
       "type": "Daytime",
+      "quantity": 1,
       "dateEntry": "07/06/2022"
     },
     {
@@ -102,29 +114,86 @@
       "image": "https://www.ngenespanol.com/wp-content/uploads/2018/08/%C2%BFEl-chocolate-blanco-es-realmente-chocolate.jpg",
       "type": "Breakfast",
       "dateEntry": "07/06/2022",
+      "quantity": 1,
       "id": 13
-    }
-  ],
-  
-  "orders": [
+    },
     {
-      "client":"",
-      "table":"",
-      "products":[
+      "client": "",
+      "table": "",
+      "order": [
         {
-          "qty":"",
-          "price":"",
-          "name":""
+          "id": 1,
+          "name": "Americano",
+          "price": "5",
+          "image": "https://elpoderdelconsumidor.org/wp-content/uploads/2021/04/cafe.jpg",
+          "type": "Breakfast",
+          "quantity": 2,
+          "dateEntry": "07/06/2022"
         },
         {
-          "qty":"",
-          "price":"",
-          "name":""
+          "id": 4,
+          "name": "Natural fruit juice",
+          "price": "7",
+          "image": "https://images.getduna.com/b974f40e-cb32-439a-b68e-f33dc24f0d84/791999e7377ab048_jugos_en_agua_fywttg.jpg?d=600x600",
+          "type": "Breakfast",
+          "quantity": 2,
+          "dateEntry": "07/06/2022"
+        },
+        {
+          "id": 6,
+          "name": "Double hamburger",
+          "price": "15",
+          "image": "https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrilla-hamburguesa-doble-con-queso-receta-hamburguesa-receta-hamburguesa-doble-queso-hamburg-793x477.jpg",
+          "type": "Daytime",
+          "quantity": 3,
+          "dateEntry": "07/06/2022"
         }
-      
       ],
-      "total":""
+      "total": "",
+      "id": 14
+    },
+    {
+      "client": "",
+      "table": "",
+      "order": [
+        {
+          "id": 12,
+          "name": "Drink/soda 750ml",
+          "price": "10",
+          "image": "https://surtitienda.vteximg.com.br/arquivos/ids/165949-2000-2000/07501055302086.1.jpg?v=636862234997230000",
+          "type": "Daytime",
+          "quantity": 3,
+          "dateEntry": "07/06/2022"
+        },
+        {
+          "id": 8,
+          "name": "Onion rings",
+          "price": "5",
+          "image": "https://t2.uc.ltmcdn.com/es/posts/9/2/6/como_hacer_aros_de_cebolla_34629_600.jpg",
+          "type": "Daytime",
+          "quantity": 3,
+          "dateEntry": "07/06/2022"
+        }
+      ],
+      "total": "",
+      "id": 15
+    },
+    {
+      "client": "",
+      "table": "",
+      "": [
+        {
+          "id": 5,
+          "name": "Single hamburger",
+          "price": "10",
+          "image": "https://assets.zyrosite.com//AwG6V9n7D6Tqpogn/une-dWx6qn8EJZSNeybP-w1370.jpg",
+          "type": "Daytime",
+          "quantity": 2,
+          "dateEntry": "07/06/2022"
+        }
+      ],
+      "total": "",
+      "id": 16
     }
   ]
-
 }
